@@ -3,13 +3,19 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/server.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/html": "^1.1.0",
+    "@elysiajs/static": "^1.1.0",
+    "@kitajs/ts-html-plugin": "^4.0.2",
+    "drizzle-orm": "^0.32.1",
+    "elysia": "latest",
+    "logixlysia": "^3.6.0"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "drizzle-kit": "^0.23.1"
   },
   "module": "src/index.js"
 }

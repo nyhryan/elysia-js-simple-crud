@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: min-content;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+form div {
+    display: grid;
+    grid-template: subgrid / 1fr 1fr;
+    gap: 1rem;
+
+    &>label {
+        text-align: right;
+    }
+}
+
+button[type="submit"] {
+    grid-column: 1 / -1;
+    justify-self: end;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* ID column */
+thead th:nth-child(1) {
+    width: 5%;
+}
+
+/* Name column */
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+/* Email column */
+thead th:nth-child(3) {
+    width: 35%;
+}
+
+/* edit column */
+thead th:nth-child(4) {
+    width: 20%;
+}
+
+/* delete column */
+thead th:nth-child(5) {
+    width: 20%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 0.1rem 0.2rem;
+}
+
+td {
+    text-align: center;
+}
+
+.edit-cell {
+    width: 100%;
+}
+
+/* CSS */
+.btn {
+    border-radius: 0.2rem;
+    border-style: none;
+    background-color: #6955d6;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    list-style: none;
+    padding: 0.1rem 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #9f93e2;
+}
+
+.btn-cancel {
+    background-color: #db2e2e;
+}
+
+.btn-cancel:hover {
+    background-color: #f06e6e;
+}
+
+.btn-submit {
+    background-color: #20f07e;
+}
+
+.btn-submit:hover {
+    background-color: #6cf0b3;
+}
